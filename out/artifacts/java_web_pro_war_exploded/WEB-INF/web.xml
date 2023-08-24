@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
+         version="4.0">
+    <welcome-file-list>
+        <welcome-file>./friend_demo/login.html</welcome-file>
+    </welcome-file-list>
+    <!--配置第一个servlet-->
+ <!--   <servlet>
+        &lt;!&ndash;servlet别名&ndash;&gt;
+        <servlet-name>firstServlet</servlet-name>
+        &lt;!&ndash;servlet对应的全限定路径名称&ndash;&gt;
+        <servlet-class>org.softteem.controller.FirstServlet</servlet-class>
+    </servlet>
+    &lt;!&ndash;servlet映射的资源路径&ndash;&gt;
+    <servlet-mapping>
+        <servlet-name>firstServlet</servlet-name>
+        &lt;!&ndash;网页路径:在创建的网页路径上加/login  它会找到firstServlet&ndash;&gt;
+        <url-pattern>/login</url-pattern>
+    </servlet-mapping>-->
+    <servlet>
+        <!--servlet别名-->
+        <servlet-name>LoginServlet</servlet-name>
+        <!--servlet对应的全限定路径名称-->
+        <servlet-class>org.softteem.controller.LoginServlet</servlet-class>
+    </servlet>
+    <!--servlet映射的资源路径-->
+    <servlet-mapping>
+        <servlet-name>LoginServlet</servlet-name>
+        <!--网页路径:在创建的网页路径上加/login  它会找到firstServlet-->
+        <url-pattern>/friend_demo/login</url-pattern>
+    </servlet-mapping>
+
+
+    <servlet>
+        <!--servlet别名-->
+        <servlet-name>RegisterServlet</servlet-name>
+        <!--servlet对应的全限定路径名称-->
+        <servlet-class>org.softteem.controller.RegisterServlet</servlet-class>
+    </servlet>
+    <!--servlet映射的资源路径-->
+    <servlet-mapping>
+        <servlet-name>RegisterServlet</servlet-name>
+        <!--网页路径:在创建的网页路径上加/login  它会找到firstServlet-->
+        <url-pattern>/friend_demo/register</url-pattern>
+    </servlet-mapping>
+</web-app>
